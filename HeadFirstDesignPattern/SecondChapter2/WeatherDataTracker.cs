@@ -20,6 +20,7 @@ namespace HeadFirstDesignPattern.SecondChapter2
             }
             return new Unsubscriber(_observers, observer);
         }
+
         private class Unsubscriber : IDisposable
         {
             private List<IObserver<WeatherData>> _observers;
@@ -30,7 +31,7 @@ namespace HeadFirstDesignPattern.SecondChapter2
                 _observers = observers;
                 _observer = observer;
             }
-            .
+
             public void Dispose()
             {
                 if (_observer != null && _observers.Contains(_observer))
@@ -39,6 +40,7 @@ namespace HeadFirstDesignPattern.SecondChapter2
                 }
             }
         }
+
         public void TrackWeatherData(WeatherData data)
         {
             foreach (var observer in _observers)
