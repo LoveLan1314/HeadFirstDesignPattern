@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <StartupObject>HeadFirstDesignPattern.ThirdChapter.StarbuzzCoffee</StartupObject>
+    <StartupObject>HeadFirstDesignPattern.ForthChapter.PizzaTestDrive</StartupObject>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
 </Project>
