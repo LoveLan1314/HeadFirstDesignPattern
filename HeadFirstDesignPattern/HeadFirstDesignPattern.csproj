@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <StartupObject>HeadFirstDesignPattern.EighthChapter.DuckSortTestDrive</StartupObject>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <StartupObject>HeadFirstDesignPattern.NinthChapter.MenuTestDrive</StartupObject>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
