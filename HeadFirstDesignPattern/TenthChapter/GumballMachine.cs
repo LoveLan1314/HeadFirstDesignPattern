@@ -142,8 +142,9 @@ namespace HeadFirstDesignPattern.TenthChapter
         public IState SoldState { get; }
         public IState WinnerState { get; }
 
-        private IState _state;
+        public IState State { get; private set; }
         public int Count { get; private set; }
+        public string Location { get; }
 
         public GumballMachine(int numberGumballs)
         {
@@ -155,29 +156,34 @@ namespace HeadFirstDesignPattern.TenthChapter
             Count = numberGumballs;
             if (numberGumballs > 0)
             {
-                _state = NoQuarterState;
+                State = NoQuarterState;
             }
+        }
+
+        public GumballMachine(string location, int count) : this(count)
+        {
+            Location = location;
         }
 
         public void InsertQuarter()
         {
-            _state.InsertQuarter();
+            State.InsertQuarter();
         }
 
         public void EjectQuarter()
         {
-            _state.EjectQuarter();
+            State.EjectQuarter();
         }
 
         public void TurnCrank()
         {
-            _state.TurnCrand();
-            _state.Dispense();
+            State.TurnCrand();
+            State.Dispense();
         }
 
         public void SetState(IState state)
         {
-            _state = state;
+            State = state;
         }
 
         public void ReleaseBall()
